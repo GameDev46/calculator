@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js" defer></script>
+
+    <div class="button-grid">
+      <div class="output">
+        <div class="previous-operand" draggable="false" id="prev-operand">0</div>
+        <div class="current-operand" draggable="false" id="cur-operand"></div>
+      </div>
+
+      <button class="span-two remove-buttons" onclick="deleteAllData()">AC</button>
+      <button onclick="removeLastNumber()" class="remove-buttons">DEL</button>
+      <button id="divide" onclick="addOperatorToData('÷')">÷</button>
+      <button id="one" onclick="addNumberToData(1)" class="number-button">1</button>
+      <button id="two" onclick="addNumberToData(2)" class="number-button">2</button>
+      <button id="three" onclick="addNumberToData(3)" class="number-button">3</button>
+      <button id="times" onclick="addOperatorToData('x')">x</button>
+      <button id="four" onclick="addNumberToData(4)" class="number-button">4</button>
+      <button id="five" onclick="addNumberToData(5)" class="number-button">5</button>
+      <button id="six" onclick="addNumberToData(6)" class="number-button">6</button>
+      <button id="plus" onclick="addOperatorToData('+')">+</button>
+      <button id="seven" onclick="addNumberToData(7)" class="number-button">7</button>
+      <button id="eight" onclick="addNumberToData(8)" class="number-button">8</button>
+      <button id="nine" onclick="addNumberToData(9)" class="number-button">9</button>
+      <button id="minus" onclick="addOperatorToData('-')">-</button>
+      <button id="stop" onclick="addNumberToData('.')">.</button>
+      <button id="zero" onclick="addNumberToData(0)" class="number-button">0</button>
+      <button class="span-two" id="equals" onclick="validateAnswerAndDisplay()">=</button>
+    </div>
+  </body>
+</html>

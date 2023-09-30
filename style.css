@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
+
+body {
+  background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.button-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+  grid-gap: 2px;
+  padding: 20px;
+}
+
+.button-grid > button {
+  cursor: pointer;
+  background: rgba(31, 229, 255, 0.418);
+  outline: none;
+  border: none;
+  border-radius: 0;
+  transition-duration: 0.3s;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.button-grid > button:hover {
+  background: rgba(0, 255, 242, 0.651);
+}
+
+.button-grid > button:focus {
+  transform: scale(0.95);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background: rgba(36, 41, 54, 0.925);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 2px;
+}
+
+.output .previous-operand {
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Lexend', sans-serif;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Lexend', sans-serif;
+}
+
+.button-grid .number-button {
+ background: rgba(104, 237, 255, 0.555);
+}
+
+.button-grid .number-button:hover {
+ background: rgba(119, 239, 255, 0.829);
+}
